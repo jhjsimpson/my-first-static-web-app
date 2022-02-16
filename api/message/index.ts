@@ -12,7 +12,6 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         
         body: { responseMessage }
     };
-
 };
 
 export default httpTrigger;
