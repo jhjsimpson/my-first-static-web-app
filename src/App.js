@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     (async function () {
-      const { responseMessage } = await( await fetch(`/api/message`)).json();
+      const { responseMessage } = await( await fetch(`/api/message?name=Jon`)).json();
       setData(responseMessage);
     })();
   });
