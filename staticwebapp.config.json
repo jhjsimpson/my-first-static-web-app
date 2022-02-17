@@ -1,16 +1,12 @@
 {
-  "navigationFallback": {
-      "rewrite": "/index.html"
-  },
   "routes": [
-      {
-        "route": "/api/*",
-        "methods": ["POST", "PUT"],
-        "allowedRoles": ["authenticated"]
-      }
+    {
+      "route": "/*",
+      "allowedRoles": ["authenticated"]
+    }
   ],
-    "responseOverrides": {
-      "401": {
+  "responseOverrides": {
+    "401": {
       "statusCode": 302,
       "redirect": "/.auth/login/aad"
     }
