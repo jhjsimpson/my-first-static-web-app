@@ -3,6 +3,12 @@
     {
       "route": "/*",
       "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/manifest.json",
+      "allowedRoles": [
+        "anonymous"
+      ]
     }
   ],
   "responseOverrides": {
