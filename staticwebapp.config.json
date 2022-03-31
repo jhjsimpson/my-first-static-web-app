@@ -1,10 +1,6 @@
 {
   "routes": [
     {
-      "route": "/manifest.json",
-      "allowedRoles": ["anonymous"]
-    },
-    {
       "route": "/.auth/login/facebook",
       "statusCode": 404
     },
@@ -34,5 +30,22 @@
       "statusCode": 302,
       "redirect": "/.auth/login/aad"
     }
+  },
+  "auth": {
+    "identityProviders": {
+      "azureActiveDirectory": {
+        "registration": {
+          "openIdIssuer": "https://login.microsoftonline.com/<TENANT_ID>/v2.0",
+          "clientIdSettingName": "AZURE_CLIENT_ID",
+          "clientSecretSettingName": "AZURE_CLIENT_SECRET"
+        }
+      }
+    }
+  },
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+  "platform": {
+    "apiRuntime": "node:14"
   }
 }
