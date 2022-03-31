@@ -21,6 +21,10 @@
       "statusCode": 404
     },
     {
+      "route": "/manifest.json",
+      "allowedRoles": ["authenticated"]
+    },
+    {
       "route": "/*",
       "allowedRoles": ["authenticated"]
     }
