@@ -23,10 +23,6 @@
     {
       "route": "/manifest.json",
       "allowedRoles": ["authenticated"]
-    },
-    {
-      "route": "/*",
-      "allowedRoles": ["authenticated"]
     }
   ],
   "responseOverrides": {
